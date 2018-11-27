@@ -109,7 +109,7 @@ class model:
                 #y = sess.run(self.y, feed_dict={self.x_input: X, self.y_: Y, self.keep_prob: 1})
                 #print(y)
                 accuracy=sess.run(self.accuracy, feed_dict={self.x_input: X, self.y_: Y, self.keep_prob: 1})
-                if (accuracy > 0.8):
+                if (accuracy > 0.7):
                     if accuracy > max_accuracy:
                         self.saver.save(sess, "ckpt2/", global_step=turn);
                 if accuracy > max_accuracy:
