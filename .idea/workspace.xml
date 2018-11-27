@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1cffd6b-717b-4bf7-b49a-ceb0c6cfe0a9" name="Default Changelist" comment="" />
+    <list default="true" id="b1cffd6b-717b-4bf7-b49a-ceb0c6cfe0a9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ckpt1/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/ckpt1/checkpoint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/data_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/data_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/load_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,22 +57,42 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-264726635">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="pkl" value="1" />
+          <entry key="stop_words" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="335" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="335" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset/stageB_data_train.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="72" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataset/stageB_data_valid.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
+            <state relative-caret-position="917">
               <caret line="2561" column="7" selection-start-line="2561" selection-start-column="7" selection-end-line="2561" selection-end-column="7" />
             </state>
           </provider>
@@ -74,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataset/stageB_data_test_unlabeled.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="3610" column="44" lean-forward="true" selection-start-line="3610" selection-start-column="8" selection-end-line="3610" selection-end-column="44" />
+            <state relative-caret-position="68590">
+              <caret line="3610" column="44" selection-start-line="3610" selection-start-column="8" selection-end-line="3610" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -83,13 +110,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/load_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="174" column="49" selection-start-line="174" selection-start-column="49" selection-end-line="174" selection-end-column="49" />
+            <state relative-caret-position="418">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1543080667001" expanded="true" signature="448:453" ph="..." />
-                <marker date="1543080667001" expanded="true" signature="762:1082" ph="..." />
-                <marker date="1543080667001" expanded="true" signature="5728:6044" ph="..." />
+                <marker date="1543325795556" expanded="true" signature="448:453" ph="..." />
+                <marker date="1543325795556" expanded="true" signature="768:1088" ph="..." />
               </folding>
             </state>
           </provider>
@@ -97,15 +123,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataset/data_test.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-47162" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/save.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="1615">
               <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -120,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataset/data_valid.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="129" selection-start-column="129" selection-end-column="129" />
+            <state relative-caret-position="285">
+              <caret column="5533" selection-start-column="5533" selection-end-column="5533" />
             </state>
           </provider>
         </entry>
@@ -129,8 +153,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="162" column="28" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+            <state relative-caret-position="-2033">
+              <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -150,6 +174,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stop_words">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vocab_dict.pkl">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -166,6 +204,9 @@
       <find>a718bae6-ddb3-11e8-bd50-8c8590a23dbd</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -175,10 +216,10 @@
         <option value="$PROJECT_DIR$/dataset/stageB_data_train.json" />
         <option value="$PROJECT_DIR$/dataset/stageB_data_valid.json" />
         <option value="$PROJECT_DIR$/stop_words" />
-        <option value="$PROJECT_DIR$/load_data.py" />
         <option value="$PROJECT_DIR$/dataset/data_test.json" />
-        <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/save.py" />
+        <option value="$PROJECT_DIR$/load_data.py" />
+        <option value="$PROJECT_DIR$/model.py" />
       </list>
     </option>
   </component>
@@ -197,12 +238,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="B" type="462c0819:PsiDirectoryNode" />
+              <item name="sentiment_analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sentiment_analysis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="B" type="b2602c69:ProjectViewProjectNode" />
-              <item name="B" type="462c0819:PsiDirectoryNode" />
+              <item name="sentiment_analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sentiment_analysis" type="462c0819:PsiDirectoryNode" />
               <item name="dataset" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -213,7 +254,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../A_" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -363,7 +404,7 @@
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.22946176" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.22836879" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.3286119" />
@@ -385,9 +426,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset/model.py" />
-    <entry file="file://$PROJECT_DIR$/vocab_dict.pkl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/word.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6194">
@@ -398,17 +436,41 @@
     <entry file="file://$PROJECT_DIR$/word_embedding_matrix.pkl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/stop_words">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/data_train.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="777" selection-start-column="777" selection-end-column="777" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict_json.json" />
+    <entry file="file://$PROJECT_DIR$/dataset/stageB_data_train.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="72" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/stageB_data_test_unlabeled.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68590">
+          <caret line="3610" column="44" selection-start-line="3610" selection-start-column="8" selection-end-line="3610" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/data_test.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/save.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1543081270841" expanded="true" signature="71:72" ph="..." />
+            <marker date="1543081270841" expanded="true" signature="71:1321" ph="..." />
+            <marker date="1543081270841" expanded="true" signature="95:100" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -422,76 +484,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stop_words">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vocab_dict.pkl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/data_valid.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="129" selection-start-column="129" selection-end-column="129" />
+        <state relative-caret-position="285">
+          <caret column="5533" selection-start-column="5533" selection-end-column="5533" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset/stageB_data_valid.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
+        <state relative-caret-position="917">
           <caret line="2561" column="7" selection-start-line="2561" selection-start-column="7" selection-end-line="2561" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/data_test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47162" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/load_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="174" column="49" selection-start-line="174" selection-start-column="49" selection-end-line="174" selection-end-column="49" />
+        <state relative-caret-position="418">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1543080667001" expanded="true" signature="448:453" ph="..." />
-            <marker date="1543080667001" expanded="true" signature="762:1082" ph="..." />
-            <marker date="1543080667001" expanded="true" signature="5728:6044" ph="..." />
+            <marker date="1543325795556" expanded="true" signature="448:453" ph="..." />
+            <marker date="1543325795556" expanded="true" signature="768:1088" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/stageB_data_train.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="72" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/stageB_data_test_unlabeled.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="3610" column="44" lean-forward="true" selection-start-line="3610" selection-start-column="8" selection-end-line="3610" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/save.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <marker date="1543081270841" expanded="true" signature="71:72" ph="..." />
-            <marker date="1543081270841" expanded="true" signature="71:1321" ph="..." />
-            <marker date="1543081270841" expanded="true" signature="95:100" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predict_json.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="44" selection-start-column="44" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="162" column="28" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+        <state relative-caret-position="-2033">
+          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>

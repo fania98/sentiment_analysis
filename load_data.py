@@ -20,7 +20,7 @@ def load_stopwords():
 #读取原本的json文件
 def collect_contents():
     content_dict = {}
-    with open("predict_json.json",encoding='utf-8') as f:
+    with open("dataset/data_valid.json",encoding='utf-8') as f:
          contents=json.load(f)
          for content in contents:
             content_dict[content['id']]=content['news_comment'];
@@ -176,10 +176,9 @@ def convertjson():
         for line in f:
             content=json.loads(line);
             json_list.append(content)
-    with open('dataset/data_test.json','w+',encoding='utf-8') as f:
+    with open('dataset/data_.json','w+',encoding='utf-8') as f:
         json.dump(json_list,f,ensure_ascii=False)
 
 
-convertjson()
 
 

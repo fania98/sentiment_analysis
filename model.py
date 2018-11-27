@@ -40,41 +40,47 @@ class model:
     def convoltion(self,size,seq_len):
         pooled_output=[];
         for i in size:
-            W=tf.Variable(tf.truncated_normal([i,64,1,50],mean=0,stddev=0.01),name='W');
-            b=tf.Variable(tf.truncated_normal([50],mean=0,stddev=0.01),name='b');
+            W=tf.Variable(tf.truncated_normal([i,64,1,100],mean=0,stddev=0.01),name='W');
+            b=tf.Variable(tf.truncated_normal([100],mean=0,stddev=0.01),name='b');
             h_conv1=tf.nn.relu(tf.nn.conv2d(self.x_input,W,strides=[1,1,1,1],padding='VALID')+b);
             pool=tf.nn.max_pool(h_conv1,[1,seq_len-i+1,1,1],strides=[1,1,1,1],padding='VALID');
             pooled_output.append(pool);
+            reg_loss=tf.contrib.layers.l2_regularizer(0.5)(W);
+            tf.add_to_collection("reg_losses",reg_loss);
 
         h_pool=tf.concat(pooled_output,3);#每个文档的pool值排放在一起
         h_pool_dropout=tf.nn.dropout(h_pool,self.keep_prob);
-        h_pool_flat=tf.reshape(h_pool_dropout,[-1,100]);
+        h_pool_flat=tf.reshape(h_pool_dropout,[-1,100*2]);
         return h_pool_flat
 
     def full_connection(self):
-        W_fc1=tf.Variable(tf.truncated_normal([100,30],mean=0,stddev=0.01),name='W_fc1');
-        b_fc1=tf.Variable(tf.truncated_normal([30],mean=0,stddev=0.1),name='b_fc1');
+        W_fc1=tf.Variable(tf.truncated_normal([200,50],mean=0,stddev=0.01),name='W_fc1');
+        b_fc1=tf.Variable(tf.truncated_normal([50],mean=0,stddev=0.1),name='b_fc1');
         h_fc1=tf.nn.relu(tf.matmul(self.conv,W_fc1)+b_fc1);
         h_fc1_drop=tf.nn.dropout(h_fc1,self.keep_prob);
-
+        reg_loss = tf.contrib.layers.l2_regularizer(0.5)(W_fc1);
+        tf.add_to_collection("reg_losses", reg_loss);
         #W_fc2=tf.Variable(tf.truncated_normal([100,10],mean=0,stddev=0.01),name='W_fc2');
         #b_fc2=tf.Variable(tf.truncated_normal([30],mean=0,stddev=0.01),name='b_fc2');
         #h_fc2=tf.nn.relu(tf.matmul(h_fc1_drop,W_fc2)+b_fc2);
         #h_fc2_drop=tf.nn.dropout(h_fc2,self.keep_prob);
 
-        W_fc3 = tf.Variable(tf.truncated_normal([30, 3], mean=0, stddev=0.01), name='W_fc2');
+        W_fc3 = tf.Variable(tf.truncated_normal([50, 3], mean=0, stddev=0.01), name='W_fc2');
         b_fc3 = tf.Variable(tf.truncated_normal([3], mean=0, stddev=0.01), name='b_fc2');
+        reg_loss = tf.contrib.layers.l2_regularizer(0.5)(W_fc3);
+        tf.add_to_collection("reg_losses", reg_loss);
         y = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc3) + b_fc3);
         return y;
 
     def calculate_loss(self):
-        loss=tf.reduce_mean(-tf.reduce_sum(self.y_*tf.log(self.y),reduction_indices=[1]))
+        #reg_loss=tf.add_n(tf.get_collection('reg_losses'));
+        loss=tf.reduce_mean(-tf.reduce_sum(self.y_*tf.log(self.y),reduction_indices=[1]));
         return loss;
 
     def train(self):
         #导入已转成id形式的语料
         data=generate_batch(batchsize=10);
-        valid_data=generate_batch(batchsize=300)
+        valid_data=generate_batch(batchsize=1000)
         sess=tf.Session();
         sess1=tf.Session();
         batchx = tf.placeholder(tf.int32, shape=[None,20]);
@@ -105,7 +111,7 @@ class model:
                 accuracy=sess.run(self.accuracy, feed_dict={self.x_input: X, self.y_: Y, self.keep_prob: 1})
                 if (accuracy > 0.8):
                     if accuracy > max_accuracy:
-                        self.saver.save(sess, "ckpt1/", global_step=turn);
+                        self.saver.save(sess, "ckpt2/", global_step=turn);
                 if accuracy > max_accuracy:
                     max_accuracy = accuracy
                 print("accuracy: %g"%accuracy);
@@ -114,10 +120,10 @@ class model:
 
     def valid(self):
         sess = tf.Session();
-        model_file = tf.train.latest_checkpoint('ckpt1/')
+        model_file = tf.train.latest_checkpoint('ckpt2/')
         self.saver.restore(sess, model_file)
         #导入已转成id形式的语料
-        data=generate_batch(batchsize=300);
+        data=generate_batch(batchsize=2000);
         #valid_data=generate_batch(batchsize=300)
         sess1=tf.Session();
         batchx = tf.placeholder(tf.int32, shape=[None,20]);
@@ -147,7 +153,7 @@ class model:
 
     def test(self):
         sess = tf.Session();
-        model_file = tf.train.latest_checkpoint('ckpt1/')
+        model_file = tf.train.latest_checkpoint('ckpt2/')
         self.saver.restore(sess, model_file)
         # 导入已转成id形式的语料
         saver=save.save();
@@ -175,4 +181,4 @@ class model:
 
 
 Model=model();
-Model.test();
+Model.valid();
