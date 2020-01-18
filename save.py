@@ -16,7 +16,7 @@ class save:
 
     def collect_content_test(self):
         content_dict = {}
-        with open("dataset/data_test.json", encoding='utf-8') as f:
+        with open("dataset_C/data_test.json", encoding='utf-8') as f:
             contents = json.load(f)
             for content in contents:
                 content_dict[content['id']] = content['news_comment'];
@@ -44,7 +44,7 @@ class save:
         # label_batch = np.zeros([batchsize], dtype='int32');
         content_dict = self.collect_content_test();
         content_cut = self.cut_content(content_dict);
-        with open('vocab_dict.pkl', 'rb') as f:
+        with open('vocab_dict_C.pkl', 'rb') as f:
             vocab_dict = pickle.load(f);
             for key, value in content_cut.items():
                 for j, word in enumerate(value):
@@ -53,7 +53,7 @@ class save:
                 self.contentids.append(key)
                 index += 1;
                 seq_num+=1
-                if index == batchsize or seq_num==3641:
+                if index == batchsize or seq_num==8495:
                     print(len(self.contentids))
                     print(seq_num)
                     yield id_batch
@@ -86,7 +86,7 @@ class save:
                 prediction['polarity']=predict
 
                 self.predict_list.append(prediction)
-        if turn==12:
-            with open('predict_json.json', 'a+', encoding='utf-8') as f:
+        if turn==28:
+            with open('predictC_json.json', 'a+', encoding='utf-8') as f:
                 json.dump(self.predict_list, f, ensure_ascii=False)
         self.contentids.clear()
